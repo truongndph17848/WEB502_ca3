@@ -1,27 +1,74 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import ShowInfo from './components/ShowInfo'
 import Product from './components/Product'
+import axios from 'axios'
+import { remove } from './api/product'
+import { list } from './api/product'
+import { Route, Routes , NavLink } from 'react-router-dom';
 
 
 interface IProduct{
-  id: number, 
+  _id: number,
   name: string
 }
-const data = [
-  { id: 1, name: "Product A"}, // item
-  { id: 2, name: "Product B"}, // item
-]
+
 function App() {
   const [count, setCount] = useState(0)
-  const [products, setProducts] = useState<IProduct[]>(data)
+  const [products, setProducts] = useState<IProduct[]>([]);
+
+  useEffect(() => {
+    const getProducts = async () => {
+        const { data } = await list();
+        setProducts(data);
+    };
+    getProducts();
+  }, [])
+
+  const removeItem = (id: number) => {
+      // call api
+      remove(id);
+      // reRender
+      setProducts(products.filter(item => item._id !== id));
+  }
+
   return (
     <div className="App">
-        <ShowInfo name="abc" age={10}/>
-        {products.map(item => <Product data={item} />)}
+
+      {products.map(item => {
+        return  <div>{item.name} <button onClick={() => removeItem(item._id)}>Remove</button></div>
+      })}
+
+
+
+
+
+        <header>
+          <ul>
+            <li>
+              <NavLink to="/">Home Page</NavLink>
+            </li>
+            <li>
+              <NavLink to="/product">Product Page</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">About</NavLink>
+            </li>
+          </ul>
+        </header>
+        <main>
+          <Routes>
+            <Route path="/" element={<h1>Home Page</h1>} />
+              <Route path="product" element={products.map(item => <div>{item.name}</div>)} />
+              <Route path="about" element={<ShowInfo name="abc" age={10} />} />
+          </Routes>
+        </main>
+
+
     </div>
   )
 }
+
 
 export default App
