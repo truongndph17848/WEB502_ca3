@@ -16,6 +16,7 @@ import ProductManager from './pages/ProductManager';
 import Home from './pages/Home';
 import ProductDetail from './pages/ProductDetail';
 import ProductAdd from './pages/ProductAdd';
+import ProductEdit from './pages/ProductEdit';
 
 
 function App() {
@@ -75,6 +76,7 @@ function App() {
                 <Route path="products">
                     <Route index element={<ProductManager products={products} onRemove={removeItem}/>} />
                     <Route path="add" element={<ProductAdd name="Truong" onAdd={onHandleAdd}/>} />
+                    <Route path=':id/edit' element={ProductEdit } />
                 </Route>
             </Route>
 

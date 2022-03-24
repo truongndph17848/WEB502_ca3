@@ -18,6 +18,7 @@ const ProductAdd = (props: ProductAddProps) =>{
     const onsubmit : SubmitHandler<TypeInputs> = data => {
         console.log(data);
         
+        props.onAdd(data);
         
     }
 
