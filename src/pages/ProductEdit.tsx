@@ -1,47 +1,43 @@
-import React, { useEffect } from 'react'
-import { useForm, SubmitHandler } from "react-hook-form";
+import React, { useEffect, useState } from 'react';
+import { useForm, SubmitHandler } from 'react-hook-form';
 import { useNavigate, useParams } from 'react-router-dom';
 import { read } from '../api/product';
+import { ProductTye } from '../types/product';
 
-type Props = {}
-
-
-type TypeInputs = {
-    name: String,
-    price: number    
+type ProductEditProps = {
+    onUpdate: (product: ProductTye) => void
 }
-
-
-
-const ProductEdit = (props: Props) => {
-
-    const {register, handleSubmit, formState: {errors} , reset } = useForm<TypeInputs>();
-    const Navigate = useNavigate();
+type FormInputs = {
+    name: string,
+    price: number
+}
+const ProductEdit = (props: ProductEditProps) => {
+    const { register, handleSubmit, formState: {errors}, reset} = useForm<FormInputs>();
+    const navigate = useNavigate();
     const { id } = useParams();
 
-    useEffect(()=>{
-        const getProduct = async () =>{
+
+    useEffect(() => {
+        const getProduct = async () => {
             const { data } = await read(id);
+            reset(data);
         }
         getProduct();
     }, [])
 
-
-
-
-    const onsubmit : SubmitHandler<TypeInputs> = data =>{
-        console.log(data);
+    const onSubmit: SubmitHandler<FormInputs> = data => {
+        console.log(data)
+        props.onUpdate(data);
+        navigate("/admin/products")
         // bắn data ra ngoài app.js
         // redirect sang trang product
-    }
-
-
+    } 
   return (
-    <form onSubmit={handleSubmit(onsubmit)}>
-        <input type="text" placeholder='name' {...register('name', {required:true})} />
-        <input type="number" placeholder='price' {...register('price')} />
-        <button> Update </button>
-    </form>
+      <form action="" onSubmit={handleSubmit(onSubmit)}>
+        <input type="text"  {...register('name', {required: true})}/>
+        <input type="number"  {...register("price")} />
+        <button>Update</button>
+      </form>
   )
 }
 

@@ -1,3 +1,15 @@
 {
-    "products": []
+    "products": [
+        {
+            "name": "product A",
+            "price": 100
+        },
+        {
+            "name": "product B",
+            "price": 200
+        }
+    ],
+    "users": [
+
+    ]
 }
