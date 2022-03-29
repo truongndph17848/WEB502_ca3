@@ -18,6 +18,8 @@ import ProductEdit from './pages/ProductEdit';
 import PrivateRouter from './components/PrivateRouter';
 import Signup from './pages/Signup';
 import Signin from './pages/Signin';
+import Details from './pages/Details';
+import Contact from './pages/Contact';
 
 
 
@@ -49,7 +51,8 @@ function App() {
   }
   return (
     <div className="App">
-        <header>
+
+{/* <header>
           <ul>
             <li>
               <NavLink to="/">Home Page</NavLink>
@@ -61,12 +64,24 @@ function App() {
               <NavLink to="/about">About</NavLink>
             </li>
           </ul>
-        </header>
+          
+</header> */}
+
         <main>
           
           <Routes>
+
+
             <Route path="/" element={<WebsiteLayout />}>
               <Route index element={<Home />} />
+              <Route path="Contact"  element={<Contact />} />
+
+              <Route path="details">
+                  <Route index  element={<Details />} />
+                  
+              </Route>
+
+
               <Route path="product">
                   <Route index  element={<h1>Hien thi san pham</h1>} />
                   <Route path=":id" element={<ProductDetail />} />
@@ -74,6 +89,8 @@ function App() {
               <Route path="about" element={<h1>About page</h1>} />
             </Route>
             
+
+
             <Route path="admin" element={<PrivateRouter><AdminLayout /></PrivateRouter>}>
                 <Route index element={<Navigate to="dashboard"/>} />
                 <Route path="dashboard" element={<Dashboard />} />
@@ -83,8 +100,12 @@ function App() {
                     <Route path="add" element={<ProductAdd name="Dat" onAdd={onHandleAdd}/>} />
                 </Route>
             </Route>
+
+
             <Route path="/signup" element={<Signup />}/>
             <Route path="/signin" element={<Signin />}/>
+
+            
           </Routes>
         </main>
     </div>
