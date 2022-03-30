@@ -1,10 +1,11 @@
 import React from 'react'
 
+
 type Props = {}
 
 const Dashboard = (props: Props) => {
   return (
-    <div>Dashboard</div>
+    <div> dash b</div>
   )
 }
 

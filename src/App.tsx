@@ -20,6 +20,9 @@ import Signup from './pages/Signup';
 import Signin from './pages/Signin';
 import Details from './pages/Details';
 import Contact from './pages/Contact';
+import Cart from './pages/Cart';
+import Productgird from './pages/Productgird';
+import Productlist from './pages/Productlist';
 
 
 
@@ -75,23 +78,25 @@ function App() {
             <Route path="/" element={<WebsiteLayout />}>
               <Route index element={<Home />} />
               <Route path="Contact"  element={<Contact />} />
+              <Route path="Cart" element={<Cart />} />
+
 
               <Route path="details">
                   <Route index  element={<Details />} />
-                  
               </Route>
 
-
-              <Route path="product">
-                  <Route index  element={<h1>Hien thi san pham</h1>} />
+              <Route path="Productlist">
+                  <Route index  element={<Productlist />} />
                   <Route path=":id" element={<ProductDetail />} />
               </Route>
+              <Route path="Productgirl" element={< Productgird />} />
               <Route path="about" element={<h1>About page</h1>} />
+
             </Route>
             
 
 
-            <Route path="admin" element={<PrivateRouter><AdminLayout /></PrivateRouter>}>
+            <Route path="admin" element={<AdminLayout />}>
                 <Route index element={<Navigate to="dashboard"/>} />
                 <Route path="dashboard" element={<Dashboard />} />
                 <Route path="products">
