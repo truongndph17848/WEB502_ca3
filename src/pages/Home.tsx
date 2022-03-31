@@ -30,7 +30,7 @@ const Home = (props: Props) => {
               <h2>Etiam velit purus, luctus vitae velit sedauctor<br />egestas diam, Etiam velit purus.</h2>
             </div>
             <div className="flat-button caption5 formLeft delay600"><a className="more" href="#">More Details</a></div>
-            <div className="flat-image formBottom delay200" data-bottom="true"><img src="images/slider-image-02.png"  /></div>
+            <div className="flat-image formBottom delay200" data-bottom="true"><img src="https://toplist.vn/images/800px/yam-mini-store-660034.jpg"  /></div>
           </li>
           <li>
             <div className="flat-caption caption2 formLeft delay400 text-center">
@@ -40,7 +40,7 @@ const Home = (props: Props) => {
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />Lorem Ipsum is simply dummy text of the printing and typesetting</p>
             </div>
             <div className="flat-button caption4 formLeft delay600 text-center"><a className="more" href="#">More Details</a></div>
-            <div className="flat-image formBottom delay200" data-bottom="true"><img src="images/slider-image-03.png"  /></div>
+            <div className="flat-image formBottom delay200" data-bottom="true"><img src="https://toplist.vn/images/800px/adore-dress-659971.jpg"  /></div>
           </li>
         </ul>
       </div>
@@ -74,7 +74,7 @@ const Home = (props: Props) => {
                 <div className="products">
                   <div className="offer">- %20</div>
                   <div className="thumbnail">
-                    <a href="Details"><img src="images/products/small/products-01.png" alt="Product Name" /></a>
+                    <a href="Details"><img src="https://oldsailor.com.vn/vnt_upload/product/02_2021/z2305655225005_5519e1d7eb0a946a5b1fa8327bf006b3_1.jpg" alt="Product Name" /></a>
                   </div>
                   <div className="productname">Iphone 5s Gold 32 Gb 2013</div>
                   <h4 className="price">$451.00</h4>
@@ -84,7 +84,7 @@ const Home = (props: Props) => {
               <div className="col-md-3 col-sm-6">
                 <div className="products">
                   <div className="thumbnail">
-                    <a href="Details"><img src="images/products/small/products-02.png" alt="Product Name" /></a>
+                    <a href="Details"><img src="https://oldsailor.com.vn/vnt_upload/product/03_2022/AKXA11065_1_fb.jpg" alt="Product Name" /></a>
                   </div>
                   <div className="productname">Iphone 5s Gold 32 Gb 2013</div>
                   <h4 className="price">$451.00</h4>
@@ -95,7 +95,7 @@ const Home = (props: Props) => {
                 <div className="products">
                   <div className="offer">New</div>
                   <div className="thumbnail">
-                    <a href="Details"><img src="images/products/small/products-03.png" alt="Product Name" /></a>
+                    <a href="Details"><img src="https://oldsailor.com.vn/vnt_upload/product/03_2022/ae71cd03694ea710fe5f4.jpg" alt="Product Name" /></a>
                   </div>
                   <div className="productname">Iphone 5s Gold 32 Gb 2013</div>
                   <h4 className="price">$451.00</h4>
@@ -105,7 +105,7 @@ const Home = (props: Props) => {
               <div className="col-md-3 col-sm-6">
                 <div className="products">
                   <div className="thumbnail">
-                    <a href="Details"><img src="images/products/small/products-04.png" alt="Product Name" /></a>
+                    <a href="Details"><img src="https://oldsailor.com.vn/vnt_upload/product/03_2022/PLCR88457_1_fb.jpg" alt="Product Name" /></a>
                   </div>
                   <div className="productname">Iphone 5s Gold 32 Gb 2013</div>
                   <h4 className="price">$451.00</h4>
@@ -120,7 +120,7 @@ const Home = (props: Props) => {
                 <div className="products">
                   <div className="offer">- %20</div>
                   <div className="thumbnail">
-                    <a href="Details"><img src="images/products/small/products-01.png" alt="Product Name" /></a>
+                    <a href="Details"><img src="https://oldsailor.com.vn/vnt_upload/product/03_2022/40f87bd91f5cd002894d7.jpg" alt="Product Name" /></a>
                   </div>
                   <div className="productname">Iphone 5s Gold 32 Gb 2013</div>
                   <h4 className="price">$451.00</h4>
@@ -130,7 +130,7 @@ const Home = (props: Props) => {
               <div className="col-md-3 col-sm-6">
                 <div className="products">
                   <div className="thumbnail">
-                    <a href="Details"><img src="images/products/small/products-02.png" alt="Product Name" /></a>
+                    <a href="Details"><img src="https://oldsailor.com.vn/vnt_upload/product/03_2022/342f180c7c89b3d7ea988.jpg" alt="Product Name" /></a>
                   </div>
                   <div className="productname">Iphone 5s Gold 32 Gb 2013</div>
                   <h4 className="price">$451.00</h4>
@@ -141,7 +141,7 @@ const Home = (props: Props) => {
                 <div className="products">
                   <div className="offer">New</div>
                   <div className="thumbnail">
-                    <a href="Details"><img src="images/products/small/products-03.png" alt="Product Name" /></a>
+                    <a href="Details"><img src="https://oldsailor.com.vn/vnt_upload/product/03_2022/51d4bff3db7614284d676.jpg" alt="Product Name" /></a>
                   </div>
                   <div className="productname">Iphone 5s Gold 32 Gb 2013</div>
                   <h4 className="price">$451.00</h4>
@@ -151,7 +151,7 @@ const Home = (props: Props) => {
               <div className="col-md-3 col-sm-6">
                 <div className="products">
                   <div className="thumbnail">
-                    <a href="Details"><img src="images/products/small/products-04.png" alt="Product Name" /></a>
+                    <a href="Details"><img src="https://oldsailor.com.vn/vnt_upload/product/03_2022/ae71cd03694ea710fe5f4.jpg" alt="Product Name" /></a>
                   </div>
                   <div className="productname">Iphone 5s Gold 32 Gb 2013</div>
                   <h4 className="price">$451.00</h4>
@@ -172,7 +172,7 @@ const Home = (props: Props) => {
               <div className="col-md-3 col-sm-6">
                 <div className="products">
                   <div className="thumbnail">
-                    <a href="Details"><img src="images/products/small/products-05.png" alt="Product Name" /></a>
+                    <a href="Details"><img src="https://oldsailor.com.vn/vnt_upload/product/03_2022/ca661b142042ee1cb75313.jpg" alt="Product Name" /></a>
                   </div>
                   <div className="productname">Iphone 5s Gold 32 Gb 2013</div>
                   <h4 className="price">$451.00</h4>
@@ -182,7 +182,7 @@ const Home = (props: Props) => {
               <div className="col-md-3 col-sm-6">
                 <div className="products">
                   <div className="thumbnail">
-                    <a href="Details"><img src="images/products/small/products-06.png" alt="Product Name" /></a>
+                    <a href="Details"><img src="https://oldsailor.com.vn/vnt_upload/product/03_2022/e028cd24cc8f03d15a9e1.jpg" alt="Product Name" /></a>
                   </div>
                   <div className="productname">Iphone 5s Gold 32 Gb 2013</div>
                   <h4 className="price">$451.00</h4>
@@ -193,7 +193,7 @@ const Home = (props: Props) => {
                 <div className="products">
                   <div className="offer">New</div>
                   <div className="thumbnail">
-                    <a href="Details"><img src="images/products/small/products-07.png" alt="Product Name" /></a>
+                    <a href="Details"><img src="https://oldsailor.com.vn/vnt_upload/product/03_2022/607e947c95d75a8903c64.jpg" alt="Product Name" /></a>
                   </div>
                   <div className="productname">Iphone 5s Gold 32 Gb 2013</div>
                   <h4 className="price">$451.00</h4>
@@ -203,7 +203,7 @@ const Home = (props: Props) => {
               <div className="col-md-3 col-sm-6">
                 <div className="products">
                   <div className="thumbnail">
-                    <a href="Details"><img src="images/products/small/products-04.png" alt="Product Name" /></a>
+                    <a href="Details"><img src="https://oldsailor.com.vn/vnt_upload/product/03_2022/095fe134da62143c4d739.jpg" alt="Product Name" /></a>
                   </div>
                   <div className="productname">Iphone 5s Gold 32 Gb 2013</div>
                   <h4 className="price">$451.00</h4>

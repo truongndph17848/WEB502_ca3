@@ -38,9 +38,9 @@ const Contact = (props: Props) => {
                       <img src="images/message.png"  />
                     </span>
                     <p>
-                      contact@michaeldesign.me
+                      contact@NguyenPostSchool.me
                       <br />
-                      support@michaeldesign.me
+                      support@NguyenPostSchool.me
                     </p>
                   </li>
                   <li>
@@ -48,9 +48,9 @@ const Contact = (props: Props) => {
                       <img src="images/phone.png"  />
                     </span>
                     <p>
-                      084. 93 668 2236
+                      085. 99 43 866
                       <br />
-                      084. 93 668 6789
+                      085. 99 43 866
                     </p>
                   </li>
                   <li>
@@ -58,9 +58,9 @@ const Contact = (props: Props) => {
                       <img src="images/address.png"  />
                     </span>
                     <p>
-                      No.86 ChuaBoc St, DongDa Dt,
+                      NguyenThaoVi , Ca Mau
                       <br />
-                      Hanoi, Vietnam
+                      , Vietnam
                     </p>
                   </li>
                 </ul>
@@ -112,104 +112,7 @@ const Contact = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="clearfix">
-      </div>
-      <div className="our-brand">
-        <h3 className="title">
-          <strong>
-            Our 
-          </strong>
-          Brands
-        </h3>
-        <div className="control">
-          <a id="prev_brand" className="prev" href="#">
-            &lt;
-          </a>
-          <a id="next_brand" className="next" href="#">
-            &gt;
-          </a>
-        </div>
-        <ul id="braldLogo">
-          <li>
-            <ul className="brand_item">
-              <li>
-                <a href="#">
-                  <div className="brand-logo">
-                    <img src="images/envato.png"  />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div className="brand-logo">
-                    <img src="images/themeforest.png"  />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div className="brand-logo">
-                    <img src="images/photodune.png"  />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div className="brand-logo">
-                    <img src="images/activeden.png"  />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div className="brand-logo">
-                    <img src="images/envato.png"  />
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul className="brand_item">
-              <li>
-                <a href="#">
-                  <div className="brand-logo">
-                    <img src="images/envato.png"  />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div className="brand-logo">
-                    <img src="images/themeforest.png"  />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div className="brand-logo">
-                    <img src="images/photodune.png"  />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div className="brand-logo">
-                    <img src="images/activeden.png"  />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div className="brand-logo">
-                    <img src="images/envato.png"  />
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+
     </div>
   </div>
   <div className="clearfix">

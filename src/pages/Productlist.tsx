@@ -316,7 +316,7 @@ const Productlist = (props: Props) => {
                   <a href="#" className="list active">
                     List
                   </a>
-                  <a href="Productgirl" className="grid">
+                  <a href="Productgird" className="grid">
                     Grid
                   </a>
                 </div>

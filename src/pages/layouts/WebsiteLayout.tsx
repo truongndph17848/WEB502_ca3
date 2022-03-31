@@ -53,8 +53,8 @@ const WebsiteLayout = (props: Props) => {
               </div>
               <div className="col-md-3">
                 <ul className="usermenu">
-                  <li><a href="checkout.html" className="log">Login</a></li>
-                  <li><a href="checkout2.html" className="reg">Register</a></li>
+                  <li><a href="Signin" className="log">Login</a></li>
+                  <li><a href="Signup" className="reg">Register</a></li>
                 </ul>
               </div>
             </div>
@@ -102,55 +102,49 @@ const WebsiteLayout = (props: Props) => {
             <div className="navbar-collapse collapse">
               <ul className="nav navbar-nav">
                 <li className="active dropdown">
-                  <a href="#" className="dropdown-toggle" data-toggle="dropdown">Home</a>
+                  <a href="/" className="dropdown-toggle" data-toggle="dropdown">Home</a>
                   <div className="dropdown-menu">
                     <ul className="mega-menu-links">
-                      <li><a href="index.html">home</a></li>
-                      <li><a href="home2.html">home2</a></li>
-                      <li><a href="home3.html">home3</a></li>
+                      <li><a href="/">home</a></li>
                       <li><a href="Productlist">Productlist</a></li>
-                      <li><a href="productgird.html">Productgird</a></li>
+                      <li><a href="Productgird">Productgird</a></li>
                       <li><a href="Details">Details</a></li>
-                      <li><a href="cart.html">Cart</a></li>
-                      <li><a href="checkout.html">CheckOut</a></li>
-                      <li><a href="checkout2.html">CheckOut2</a></li>
+                      <li><a href="Cart">Cart</a></li>
                       <li><a href="Contact">contact</a></li>
                     </ul>
                   </div>
                 </li>
                 <li><a href="Productlist">men</a></li>
-                <li><a href="Productgirl">women</a></li>
+                <li><a href="Productgird">women</a></li>
                 <li className="dropdown">
                   <a href="#" className="dropdown-toggle" data-toggle="dropdown">Fashion</a>
                   <div className="dropdown-menu mega-menu">
                     <div className="row">
                       <div className="col-md-6 col-sm-6">
                         <ul className="mega-menu-links">
-                          <li><a href="productgird.html">New Collection</a></li>
-                          <li><a href="productgird.html">Shirts &amp; tops</a></li>
-                          <li><a href="productgird.html">Laptop &amp; Brie</a></li>
-                          <li><a href="productgird.html">Dresses</a></li>
-                          <li><a href="productgird.html">Blazers &amp; Jackets</a></li>
-                          <li><a href="productgird.html">Shoulder Bags</a></li>
+                          <li><a href="Productgird">New Collection</a></li>
+                          <li><a href="Productgird">Shirts &amp; tops</a></li>
+                          <li><a href="Productgird">Laptop &amp; Brie</a></li>
+                          <li><a href="Productgird">Dresses</a></li>
+                          <li><a href="Productgird">Blazers &amp; Jackets</a></li>
+                          <li><a href="Productgird">Shoulder Bags</a></li>
                         </ul>
                       </div>
                       <div className="col-md-6 col-sm-6">
                         <ul className="mega-menu-links">
-                          <li><a href="productgird.html">New Collection</a></li>
-                          <li><a href="productgird.html">Shirts &amp; tops</a></li>
-                          <li><a href="productgird.html">Laptop &amp; Brie</a></li>
-                          <li><a href="productgird.html">Dresses</a></li>
-                          <li><a href="productgird.html">Blazers &amp; Jackets</a></li>
-                          <li><a href="productgird.html">Shoulder Bags</a></li>
+                          <li><a href="Productgird">New Collection</a></li>
+                          <li><a href="Productgird">Shirts &amp; tops</a></li>
+                          <li><a href="Productgird">Laptop &amp; Brie</a></li>
+                          <li><a href="Productgird">Dresses</a></li>
+                          <li><a href="Productgird">Blazers &amp; Jackets</a></li>
+                          <li><a href="Productgird">Shoulder Bags</a></li>
                         </ul>
                       </div>
                     </div>
                   </div>
                 </li>
-                <li><a href="productgird.html">gift</a></li>
-                <li><a href="productgird.html">kids</a></li>
-                <li><a href="productgird.html">blog</a></li>
-                <li><a href="productgird.html">jewelry</a></li>
+
+                <li><a href="Productgird">blog</a></li>
                 <li><a href="Contact">contact us</a></li>
               </ul>
             </div>
@@ -185,9 +179,9 @@ const WebsiteLayout = (props: Props) => {
           </div>
           <div className="col-md-3 col-sm-6">
             <h4 className="title">Contact <strong>Info</strong></h4>
-            <p>No. 08, Nguyen Trai, Hanoi , Vietnam</p>
-            <p>Call Us : (084) 1900 1008</p>
-            <p>Email : michael@leebros.us</p>
+            <p> NguyenThaoVi, Cà Mau, Vietnam</p>
+            <p>Call Us : (+84)85 994 3886</p>
+            <p>Email : nguyendangtruongceo@gmail.com</p>
           </div>
           <div className="col-md-3 col-sm-6">
             <h4 className="title">Customer<strong> Support</strong></h4>
@@ -213,7 +207,7 @@ const WebsiteLayout = (props: Props) => {
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <p>Copyright © 2012. Designed by <a href="#">Michael Lee</a>. All rights reseved</p>
+            <p>Copyright © 2012. Designed by <a href="https://www.facebook.com/profile.php?id=100044023059426">Nguyen Post School</a>. All rights reseved</p>
           </div>
           <div className="col-md-6">
             <ul className="social-icon">

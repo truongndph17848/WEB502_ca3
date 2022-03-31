@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
 import logo from './logo.svg'
 
+
+
 import ShowInfo from './components/ShowInfo'
 import Product from './components/Product'
 import { add, list, remove, update } from './api/product';
@@ -80,6 +82,8 @@ function App() {
               <Route path="Contact"  element={<Contact />} />
               <Route path="Cart" element={<Cart />} />
 
+              <Route path="/signup" element={<Signup />}/>
+              <Route path="/signin" element={<Signin />}/>
 
               <Route path="details">
                   <Route index  element={<Details />} />
@@ -89,7 +93,7 @@ function App() {
                   <Route index  element={<Productlist />} />
                   <Route path=":id" element={<ProductDetail />} />
               </Route>
-              <Route path="Productgirl" element={< Productgird />} />
+              <Route path="Productgird" element={< Productgird />} />
               <Route path="about" element={<h1>About page</h1>} />
 
             </Route>
@@ -106,9 +110,6 @@ function App() {
                 </Route>
             </Route>
 
-
-            <Route path="/signup" element={<Signup />}/>
-            <Route path="/signin" element={<Signin />}/>
 
             
           </Routes>

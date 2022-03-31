@@ -390,7 +390,7 @@ const Productgird = (props: Props) => {
             <div className="col-md-4 col-sm-6">
               <div className="products">
                 <div className="thumbnail">
-                  <a href="details.html">
+                  <a href="Details">
                     <img src="images/products/small/products-05.png" alt="Product Name" />
                   </a>
                 </div>
@@ -418,7 +418,7 @@ const Productgird = (props: Props) => {
             <div className="col-md-4 col-sm-6">
               <div className="products">
                 <div className="thumbnail">
-                  <a href="details.html">
+                  <a href="Details">
                     <img src="images/products/small/products-06.png" alt="Product Name" />
                   </a>
                 </div>
@@ -449,7 +449,7 @@ const Productgird = (props: Props) => {
                   New
                 </div>
                 <div className="thumbnail">
-                  <a href="details.html">
+                  <a href="Details">
                     <img src="images/products/small/products-07.png" alt="Product Name" />
                   </a>
                 </div>
@@ -477,7 +477,7 @@ const Productgird = (props: Props) => {
             <div className="col-md-4 col-sm-6">
               <div className="products">
                 <div className="thumbnail">
-                  <a href="details.html">
+                  <a href="Details">
                     <img src="images/products/small/products-05.png" alt="Product Name" />
                   </a>
                 </div>
@@ -505,7 +505,7 @@ const Productgird = (props: Props) => {
             <div className="col-md-4 col-sm-6">
               <div className="products">
                 <div className="thumbnail">
-                  <a href="details.html">
+                  <a href="Details">
                     <img src="images/products/small/products-06.png" alt="Product Name" />
                   </a>
                 </div>
@@ -536,7 +536,7 @@ const Productgird = (props: Props) => {
                   New
                 </div>
                 <div className="thumbnail">
-                  <a href="details.html">
+                  <a href="Details">
                     <img src="images/products/small/products-07.png" alt="Product Name" />
                   </a>
                 </div>
@@ -564,7 +564,7 @@ const Productgird = (props: Props) => {
             <div className="col-md-4 col-sm-6">
               <div className="products">
                 <div className="thumbnail">
-                  <a href="details.html">
+                  <a href="Details">
                     <img src="images/products/small/products-05.png" alt="Product Name" />
                   </a>
                 </div>
@@ -592,7 +592,7 @@ const Productgird = (props: Props) => {
             <div className="col-md-4 col-sm-6">
               <div className="products">
                 <div className="thumbnail">
-                  <a href="details.html">
+                  <a href="Details">
                     <img src="images/products/small/products-06.png" alt="Product Name" />
                   </a>
                 </div>
@@ -623,7 +623,7 @@ const Productgird = (props: Props) => {
                   New
                 </div>
                 <div className="thumbnail">
-                  <a href="details.html">
+                  <a href="Details">
                     <img src="images/products/small/products-07.png" alt="Product Name" />
                   </a>
                 </div>

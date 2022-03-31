@@ -1,4 +1,8 @@
 import React from 'react'
+
+// import "bootstrap/dist/css/bootstrap.min.css"
+import "antd/dist/antd.variable.min.css";
+
 import { Outlet } from 'react-router-dom'
 import Sidebar from '../../components/Sidebar'
 
