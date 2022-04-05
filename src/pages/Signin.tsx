@@ -192,8 +192,8 @@ const Signin = () => {
         <div className="checkout-page">
           <ol className="checkout-steps">
             <li className="steps active">
-              <a href="checkout.html" className="step-title">
-                01. checkout opition
+              <a href="Signup" className="step-title">
+                01. Login
               </a>
               <div className="step-description">
                 <div className="row">
@@ -221,9 +221,7 @@ const Signin = () => {
                       <p className="requir">
                         By creating an account you will be able to shop faste be up to date on an order's status, and keep track of the orders you have previously made.
                       </p>
-                      <button>
-                        Continue
-                      </button>
+
                     </div>
                   </div>
                   <div className="col-md-6 col-sm-6">
@@ -266,7 +264,7 @@ const Signin = () => {
             </li>
             <li className="steps">
               <a href="Signup" className="step-title">
-                02. billing information
+                02. Register
               </a>
             </li>
           </ol>

@@ -15,13 +15,12 @@ const ProductAdd = (props: ProductAddProps) => {
     const navigate = useNavigate();
 
     const onSubmit: SubmitHandler<TypeInputs> = data => {
-        props.onAdd(data); 
+        props.onAdd(data);
         navigate("/admin/products")
         
     }
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-        {props.name}
         <input type="text" placeholder='Ten san pham' {...register('name')} />
         <input type="number" placeholder='Gia san pham' {...register('price')} />
         <button>Add</button>

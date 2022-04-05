@@ -263,18 +263,7 @@ const Cart = (props: Props) => {
                 </td>
               </tr>
             </tbody>
-            <tfoot>
-              <tr>
-                <td colSpan={6}>
-                  <button className="pull-left">
-                    Continue Shopping
-                  </button>
-                  <button className=" pull-right">
-                    Update Shopping Cart
-                  </button>
-                </td>
-              </tr>
-            </tfoot>
+
           </table>
           <div className="clearfix">
           </div>

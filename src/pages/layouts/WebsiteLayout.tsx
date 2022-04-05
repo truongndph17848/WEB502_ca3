@@ -14,7 +14,7 @@ const WebsiteLayout = (props: Props) => {
       <div className="row">
         <div className="col-md-2 col-sm-2">
           <div className="logo">
-            <a href="/"><img src="images/logo.png" alt="FlatShop" /></a>
+            <a href="/"><img src="https://giaygiare.vn/upload/giaodien/logo-new-year.png" /></a>
           </div>
         </div>
         <div className="col-md-10 col-sm-10">
@@ -27,16 +27,14 @@ const WebsiteLayout = (props: Props) => {
                     <ul className="subnav">
                       <li><a href="#">Eng</a></li>
                       <li><a href="#">Vns</a></li>
-                      <li><a href="#">Fer</a></li>
-                      <li><a href="#">Gem</a></li>
+
                     </ul>
                   </li>
                   <li className="dorpdown">
                     <a href="#">USD</a>
                     <ul className="subnav">
                       <li><a href="#">USD</a></li>
-                      <li><a href="#">UKD</a></li>
-                      <li><a href="#">FER</a></li>
+                      <li><a href="#">VND</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -174,7 +172,7 @@ const WebsiteLayout = (props: Props) => {
         <div className="row">
           <div className="col-md-3">
             <div className="footer-logo">
-              <a href="#"><img src="images/logo.png"  /></a>
+              <a href="/"><img src="https://giaygiare.vn/upload/giaodien/logo-new-year.png"  /></a>
             </div>
           </div>
           <div className="col-md-3 col-sm-6">

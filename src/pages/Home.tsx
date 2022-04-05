@@ -1,11 +1,17 @@
 import React from 'react'
+import { ProductTye } from '../types/product';
 
-type Props = {}
+type Props = {
+  products: ProductTye[];
+}
 
-const Home = (props: Props) => {
+
+
+const Home = (props: Props) => {  
   return (
+    
 <div>
-  <div className="hom-slider">
+<div className="hom-slider">
     <div className="container">
       <div id="sequence">
         <div className="sequence-prev"><i className="fa fa-angle-left" /></div>
@@ -68,53 +74,33 @@ const Home = (props: Props) => {
         <h3 className="title"><strong>Hot</strong> Products</h3>
         <div className="control"><a id="prev_hot" className="prev" href="#">&lt;</a><a id="next_hot" className="next" href="#">&gt;</a></div>
         <ul id="hot">
-          <li>
+
             <div className="row">
-              <div className="col-md-3 col-sm-6">
-                <div className="products">
-                  <div className="offer">- %20</div>
-                  <div className="thumbnail">
-                    <a href="Details"><img src="https://oldsailor.com.vn/vnt_upload/product/02_2021/z2305655225005_5519e1d7eb0a946a5b1fa8327bf006b3_1.jpg" alt="Product Name" /></a>
-                  </div>
-                  <div className="productname">Iphone 5s Gold 32 Gb 2013</div>
-                  <h4 className="price">$451.00</h4>
-                  <div className="button_group"><button className="button add-cart" type="button">Add To Cart</button><button className="button compare" type="button"><i className="fa fa-exchange" /></button><button className="button wishlist" type="button"><i className="fa fa-heart-o" /></button></div>
+
+              {/* Hiển Thị Danh Sách Sản Phẩm */}
+
+
+              {props.products?.map(product => {
+              return <div className="col-md-3 col-sm-6">
+              <div className="products">
+                <div className="offer">- %20</div>
+                <div className="thumbnail">
+                  <a href="Details"><img src="https://oldsailor.com.vn/vnt_upload/product/02_2021/z2305655225005_5519e1d7eb0a946a5b1fa8327bf006b3_1.jpg"  /></a>
                 </div>
-              </div>
-              <div className="col-md-3 col-sm-6">
-                <div className="products">
-                  <div className="thumbnail">
-                    <a href="Details"><img src="https://oldsailor.com.vn/vnt_upload/product/03_2022/AKXA11065_1_fb.jpg" alt="Product Name" /></a>
-                  </div>
-                  <div className="productname">Iphone 5s Gold 32 Gb 2013</div>
-                  <h4 className="price">$451.00</h4>
-                  <div className="button_group"><button className="button add-cart" type="button">Add To Cart</button><button className="button compare" type="button"><i className="fa fa-exchange" /></button><button className="button wishlist" type="button"><i className="fa fa-heart-o" /></button></div>
-                </div>
-              </div>
-              <div className="col-md-3 col-sm-6">
-                <div className="products">
-                  <div className="offer">New</div>
-                  <div className="thumbnail">
-                    <a href="Details"><img src="https://oldsailor.com.vn/vnt_upload/product/03_2022/ae71cd03694ea710fe5f4.jpg" alt="Product Name" /></a>
-                  </div>
-                  <div className="productname">Iphone 5s Gold 32 Gb 2013</div>
-                  <h4 className="price">$451.00</h4>
-                  <div className="button_group"><button className="button add-cart" type="button">Add To Cart</button><button className="button compare" type="button"><i className="fa fa-exchange" /></button><button className="button wishlist" type="button"><i className="fa fa-heart-o" /></button></div>
-                </div>
-              </div>
-              <div className="col-md-3 col-sm-6">
-                <div className="products">
-                  <div className="thumbnail">
-                    <a href="Details"><img src="https://oldsailor.com.vn/vnt_upload/product/03_2022/PLCR88457_1_fb.jpg" alt="Product Name" /></a>
-                  </div>
-                  <div className="productname">Iphone 5s Gold 32 Gb 2013</div>
-                  <h4 className="price">$451.00</h4>
-                  <div className="button_group"><button className="button add-cart" type="button">Add To Cart</button><button className="button compare" type="button"><i className="fa fa-exchange" /></button><button className="button wishlist" type="button"><i className="fa fa-heart-o" /></button></div>
-                </div>
+                <div className="productname"> {product.name}</div>
+                <h5 className="productname"> {product.name}</h5>
+                <h4 className="price"> ${product.price}</h4>
+                <div className="button_group"><button className="button add-cart" type="button">Add To Cart</button><button className="button compare" type="button"><i className="fa fa-exchange" /></button><button className="button wishlist" type="button"><i className="fa fa-heart-o" /></button></div>
               </div>
             </div>
-          </li>
-          <li>
+               
+            })}
+
+{/* Hiển Thị Danh Sách Sản Phẩm */}
+
+            </div>
+
+          {/* <li>
             <div className="row">
               <div className="col-md-3 col-sm-6">
                 <div className="products">
@@ -159,7 +145,7 @@ const Home = (props: Props) => {
                 </div>
               </div>
             </div>
-          </li>
+          </li> */}
         </ul>
       </div>
       <div className="clearfix" />
@@ -324,7 +310,7 @@ const Home = (props: Props) => {
         </ul>
       </div>
     </div>
-  </div>
+  </div> 
 </div>
 
   )

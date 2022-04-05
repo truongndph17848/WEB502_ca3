@@ -1,15 +1,56 @@
 {
-    "products": [
-        {
-            "name": "product A",
-            "price": 100
-        },
-        {
-            "name": "product B",
-            "price": 200
-        }
-    ],
-    "users": [
-
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "product B",
+      "price": 200
+    },
+    {
+      "id": 2,
+      "name": "product BBBBBBBBBBB",
+      "price": 200
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "truong",
+      "email": "truong@gmail.com",
+      "password": "123456"
+    },
+    {
+      "name": "truonggg",
+      "email": "truongndph17848@fpt.edu.vn",
+      "password": "12321131221",
+      "id": 2
+    },
+    {
+      "name": "truonggg",
+      "email": "truongndph17848@fpt.edu.vn",
+      "password": "12321131221",
+      "id": 3
+    },
+    {
+      "name": "truonggg",
+      "email": "truongndph17848@fpt.edu.vn",
+      "password": "12321131221",
+      "id": 4
+    },
+    {
+      "name": "truonggg",
+      "email": "truongndph17848@fpt.edu.vn",
+      "password": "12321131221",
+      "id": 5
+    }
+  ],
+  "categorys": [
+    {
+      "id": 1,
+      "category": "Danh muc A"
+    },
+    {
+      "category": "Danh Muc B",
+      "id": 2
+    }
+  ]
 }
