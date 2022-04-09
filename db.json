@@ -2,13 +2,23 @@
   "products": [
     {
       "id": 1,
-      "name": "product B",
-      "price": 200
+      "name": "San Pham A",
+      "price": 100
     },
     {
-      "id": 2,
-      "name": "product BBBBBBBBBBB",
-      "price": 200
+      "name": "San Pham B",
+      "price": "200",
+      "id": 2
+    },
+    {
+      "name": "San Pham C update",
+      "price": "300",
+      "id": 3
+    },
+    {
+      "name": "truong 131232",
+      "price": "123123",
+      "id": 4
     }
   ],
   "users": [
@@ -19,28 +29,118 @@
       "password": "123456"
     },
     {
-      "name": "truonggg",
-      "email": "truongndph17848@fpt.edu.vn",
-      "password": "12321131221",
+      "name": "truong1",
+      "email": "nguyendangtruong58@gmail.com",
+      "password": "12345567",
       "id": 2
     },
     {
-      "name": "truonggg",
+      "name": "truong123",
       "email": "truongndph17848@fpt.edu.vn",
-      "password": "12321131221",
+      "password": "12313123",
       "id": 3
     },
     {
-      "name": "truonggg",
-      "email": "truongndph17848@fpt.edu.vn",
-      "password": "12321131221",
+      "name": "truong123",
+      "email": "nguyendangtruong57@gmail.com",
+      "password": "123",
       "id": 4
     },
     {
-      "name": "truonggg",
-      "email": "truongndph17848@fpt.edu.vn",
-      "password": "12321131221",
+      "name": "truong321",
+      "email": "nguyendangtruong44@gmail.com",
+      "password": "123",
       "id": 5
+    },
+    {
+      "email": "truong@gmail.com",
+      "password": "123456",
+      "id": 6
+    },
+    {
+      "email": "truong@gmail.com",
+      "password": "123456",
+      "id": 7
+    },
+    {
+      "email": "truong@gmail.com",
+      "password": "123456",
+      "id": 8
+    },
+    {
+      "email": "truong@gmail.com",
+      "password": "123456",
+      "id": 9
+    },
+    {
+      "email": "truong@gmail.com",
+      "password": "123456",
+      "id": 10
+    },
+    {
+      "email": "truong@gmail.com",
+      "password": "123456",
+      "id": 11
+    },
+    {
+      "email": "truong@gmail.com",
+      "password": "123456",
+      "id": 12
+    },
+    {
+      "email": "truong@gmail.com",
+      "password": "123456",
+      "id": 13
+    },
+    {
+      "email": "truong@gmail.com",
+      "password": "123456",
+      "id": 14
+    },
+    {
+      "email": "truong@gmail.com",
+      "password": "123456",
+      "id": 15
+    },
+    {
+      "email": "truong@gmail.com",
+      "password": "123456",
+      "id": 16
+    },
+    {
+      "email": "truong@gmail.com",
+      "password": "123456",
+      "id": 17
+    },
+    {
+      "email": "truong@gmail.com",
+      "password": "123456",
+      "id": 18
+    },
+    {
+      "email": "truong@gmail.com",
+      "password": "123456",
+      "id": 19
+    },
+    {
+      "email": "truong@gmail.com",
+      "password": "123456",
+      "id": 20
+    },
+    {
+      "email": "truong@gmail.com",
+      "password": "123456",
+      "id": 21
+    },
+    {
+      "email": "truong@gmail.com",
+      "password": "123456",
+      "id": 22
+    },
+    {
+      "email": "123123@gmail.com",
+      "password": "132",
+      "id": 23
     }
   ],
   "categorys": [
@@ -51,6 +151,10 @@
     {
       "category": "Danh Muc B",
       "id": 2
+    },
+    {
+      "category": "Danh Muc C",
+      "id": 3
     }
   ]
 }

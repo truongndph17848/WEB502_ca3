@@ -55,11 +55,11 @@ const AdminLayout = (props: Props) => {
         </Menu.Item>
 
         <Menu.Item key="1" icon={<UserOutlined />}>
-         Quản Lý Bài Viết
+        <NavLink to="#">Quản lý Bài Viết</NavLink>
         </Menu.Item>
 
         <Menu.Item key="2" icon={<VideoCameraOutlined />}>
-              <NavLink to="#">Quản lý Danh Mục</NavLink>
+              <NavLink to="categorys">Quản lý Danh Mục</NavLink>
         </Menu.Item>
         <Menu.Item key="3" icon={<UploadOutlined />}>
           <NavLink to="products">Quản lý Sản Phẩm</NavLink>

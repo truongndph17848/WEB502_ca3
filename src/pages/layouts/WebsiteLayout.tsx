@@ -1,10 +1,14 @@
-import React from 'react'
+import React,  { useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import { Outlet } from 'react-router-dom'
 import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
 
 type Props = {}
 
 const WebsiteLayout = (props: Props) => {
+
+
   return (
     <div className="wrapper">
 
@@ -61,7 +65,15 @@ const WebsiteLayout = (props: Props) => {
           <div className="header_bottom">
             <ul className="option">
               <li id="search" className="search">
-                <form><input className="search-submit" type="submit"  /><input className="search-input" placeholder="Enter your search term..." type="text"  name="search" /></form>
+
+
+
+                <form>
+                  <input className="search-submit" type="submit"  />
+                  <input className="search-input" placeholder="Enter your search term..." type="text"  name="search" />
+                  </form>
+
+
               </li>
               <li className="option-cart">
                 <a href="Cart" className="cart-icon">cart <span className="cart_no">02</span></a>

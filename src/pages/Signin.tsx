@@ -1,6 +1,7 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { signin, signup } from '../api/auth';
+import { authenticated } from '../utils/localStorage';
 
 type TypeInputs = {
     email: string,
@@ -13,8 +14,11 @@ const Signin = () => {
 
     const onSubmit: SubmitHandler<TypeInputs> = async data => {
         const {data : user} = await signin(data);
-        console.log(user);
+        // console.log(user);
         // localstorage
+        authenticated(user, () => {
+          // navigate('/');
+      })
     }
   return (
 
@@ -229,7 +233,12 @@ const Signin = () => {
                       <h5>
                         Rerunning Customer
                       </h5>
-                      <form>
+                      
+
+{/* form đăng nhập */}
+
+
+                      <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-row">
                           <label className="lebel-abs">
                             Email 
@@ -237,7 +246,7 @@ const Signin = () => {
                               *
                             </strong>
                           </label>
-                          <input type="text" className="input namefild"  />
+                          <input type="text" className="input namefild"  placeholder='Email' {...register('email')}  />
                         </div>
                         <div className="form-row">
                           <label className="lebel-abs">
@@ -246,17 +255,19 @@ const Signin = () => {
                               *
                             </strong>
                           </label>
-                          <input type="text" className="input namefild"  />
+                          <input type="text" className="input namefild"  placeholder='Mật khẩu' {...register('password')} />
                         </div>
                         <p className="forgoten">
                           <a href="#">
                             Forgoten your password?
                           </a>
                         </p>
-                        <button>
-                          Login
-                        </button>
+                        <button>Đăng nhập</button>
                       </form>
+
+
+{/* end form đăng nhập */}
+
                     </div>
                   </div>
                 </div>

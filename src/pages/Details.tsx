@@ -1,8 +1,24 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
+import { ProductTye } from '../types/product';
 
-type Props = {}
+type Props = {
+    products: ProductTye[];
+}
 
 const Details = (props: Props) => {
+  console.log(props.products);
+
+  //  truyenid
+  // const btnAddTocart = document.querySelector('#btnAddTocart');
+  // const inputValue = document.querySelector('#inputValue');
+  // btnAddTocart.addEventListener('click', async () => {
+  //   const { data } = await get(id);
+  //   addToCart({ ...data, quantity: inputValue.value ? +inputValue.value : 1 }, function () {
+  //     toastr.success("Thêm vào giỏ hàng thành công!");
+  //   })
+  // })
+
   return (
     
 <div>
@@ -20,13 +36,24 @@ const Details = (props: Props) => {
   <div className="container_fullwidth">
     <div className="container">
       <div className="row">
+
+
+
+
         <div className="col-md-9">
+
+
+ {/* Add to cart  -- END */}
+
+
+        <form action="">
+    
           <div className="products-details">
             <div className="preview_image">
               <div className="preview-small">
                 <img id="zoom_03" src="images/products/medium/products-01.jpg" data-zoom-image="images/products/Large/products-01.jpg"  />
               </div>
-              <div className="thum-image">
+              {/* <div className="thum-image">
                 <ul id="gallery_01" className="prev-thum">
                   <li>
                     <a href="#" data-image="images/products/medium/products-01.jpg" data-zoom-image="images/products/Large/products-01.jpg">
@@ -62,7 +89,7 @@ const Details = (props: Props) => {
                   <i className="fa fa-chevron-right">
                   </i>
                 </a>
-              </div>
+              </div> */}
             </div>
             <div className="products-description">
               <h5 className="name">
@@ -110,7 +137,7 @@ const Details = (props: Props) => {
                   </select>
                 </div>
                 <div className="button_group">
-                  <button className="button">
+                  <button className="button" id="btnAddTocart">
                     Add To Cart
                   </button>
                   <button className="button compare">
@@ -133,6 +160,15 @@ const Details = (props: Props) => {
               <img src="images/share.png"  className="pull-right" />
             </div>
           </div>
+
+          </form>
+
+
+            {/* Add to cart  -- END */}
+
+
+
+
           <div className="clearfix">
           </div>
           <div className="tab-box">
@@ -165,6 +201,11 @@ const Details = (props: Props) => {
                 </p>
               </div>
               <div className="tab-content" id="Reviews">
+
+
+
+
+
                 <form>
                   <table>
                     <thead>
@@ -298,6 +339,7 @@ const Details = (props: Props) => {
                     </div>
                   </div>
                 </form>
+   
               </div>
               <div className="tab-content">
                 <div className="review">
@@ -643,6 +685,14 @@ const Details = (props: Props) => {
           <div className="clearfix">
           </div>
         </div>
+
+
+        
+
+
+
+
+        
         <div className="col-md-3">
           <div className="special-deal leftbar">
             <h4 className="title">

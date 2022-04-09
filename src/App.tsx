@@ -31,6 +31,7 @@ import CategoryList from './admin/Categorys/CategoryList';
 import CategoryAdd from './admin/Categorys/CategoryAdd';
 import { CategoryType } from './types/category';
 import { User } from './types/User';
+import Search from './pages/Search';
 
 
 
@@ -77,14 +78,14 @@ function App() {
     getCategorys();
   }, [])
   const onHandleAddCategory = async (category: CategoryType) => {
-    console.log('category', category);
+    // console.log('category', category);
     const { data } = await addCate(category);
     setCategorys([...categorys, data]);
   }
 
 
   const onSignup = async (user: User) => {
-    console.log('User', user);
+    // console.log('User', user);
     const { data } = await signup(user);
     setusers([...users, data]);
     
@@ -120,15 +121,12 @@ function App() {
               <Route index element={<Home products={products} />} />
               <Route path="Contact"  element={<Contact />} />
               <Route path="Cart" element={<Cart />} />
-
+              <Route path="search/:value" element={<Search />} />
+              <Route path="Details/:id" element={<Details products={products} />} />
               
 
               <Route path="/signup" element={<Signup onSignup={onSignup}/>}/>
               <Route path="/signin" element={<Signin />}/>
-
-              <Route path="details">
-                  <Route index  element={<Details />} />
-              </Route>
 
               <Route path="Productlist">
                   <Route index  element={<Productlist />} />

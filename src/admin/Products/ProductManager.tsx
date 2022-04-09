@@ -18,6 +18,7 @@ const ProductManager = (props: ProductManagerProps) => {
         <th>STT</th>
          <th>Name</th>
          <th>Price</th>
+         <th>Category</th>
          <th colSpan={2}>Action
          <button> <NavLink to="add"> Add Product</NavLink> </button>
          </th>
@@ -30,11 +31,12 @@ const ProductManager = (props: ProductManagerProps) => {
                 <td key={index}> {index + 1} </td>
                 <td> { product.name}</td>
                 <td> { product.price}</td>
+                <td></td>
                 <td>
-                  <button onClick={()=>{props.onRemove(product.id)}}> Remove</button>
+                  <button onClick={()=>{props.onRemove(product.id!)}}> Remove</button>
                 </td>
                 <td>
-                  <button > <NavLink to="/admin/${product.id}/edit">Edit</NavLink> </button>
+                  <button > <NavLink to={`/admin/products/${product.id}/edit`}>Edit</NavLink> </button>
                   </td>
               </tr>
             })}

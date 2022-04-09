@@ -26,7 +26,7 @@ const ProductEdit = (props: ProductEditProps) => {
     }, [])
 
     const onSubmit: SubmitHandler<FormInputs> = data => {
-        console.log(data)
+        // console.log(data)
         props.onUpdate(data);
         navigate("/admin/products")
         // bắn data ra ngoài app.js
