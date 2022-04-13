@@ -6,7 +6,7 @@ import logo from './logo.svg'
 
 import ShowInfo from './components/ShowInfo'
 import Product from './components/Product'
-import { add, list, remove, update } from './api/product';
+import { add, list, read, remove, SearchProductByName, update } from './api/product';
 import { addCate, listCate, removeCate, updateCate } from './api/category';
 import { signin, signup } from './api/auth';
 import axios from 'axios';
@@ -22,9 +22,9 @@ import ProductEdit from './admin/Products/ProductEdit';
 import PrivateRouter from './components/PrivateRouter';
 import Signup from './pages/Signup';
 import Signin from './pages/Signin';
-import Details from './pages/Details';
+// import Details from './pages/Details';
 import Contact from './pages/Contact';
-import Cart from './pages/Cart';
+import Cart from './pages/CartPage';
 import Productgird from './pages/Productgird';
 import Productlist from './pages/Productlist';
 import CategoryList from './admin/Categorys/CategoryList';
@@ -32,14 +32,21 @@ import CategoryAdd from './admin/Categorys/CategoryAdd';
 import { CategoryType } from './types/category';
 import { User } from './types/User';
 import Search from './pages/Search';
+import { addToCart, decreaseItemInCart, increaseItemInCart, removeItemInCart } from './utils/cart';
+import CategoryEdit from './admin/Categorys/CategoryEdit';
 
-
+import toastr from 'toastr';
+import "toastr/build/toastr.min.css";
+import CartPage from './pages/CartPage';
 
 function App() {
   const [products, setProducts] = useState<ProductTye[]>([]);
   const [categorys, setCategorys] = useState<CategoryType[]>([]);
   const [users, setusers] = useState<User[]>([]);
 
+  const [cart, setCart] = useState<ProductTye[]>([]);
+
+  const [searchProduct, setsearchProduct] = useState<ProductTye[]>([]);
 
   useEffect(() => {
     const getProducts = async () => {
@@ -52,7 +59,7 @@ function App() {
       // call api
       remove(id);
       // reRender
-      setProducts(products.filter(item => item.id !== id));
+      setProducts(products.filter(item => item._id !== id));
   }
 
   const onHandleAdd = async (product: ProductTye) => {
@@ -88,9 +95,48 @@ function App() {
     // console.log('User', user);
     const { data } = await signup(user);
     setusers([...users, data]);
-    
   }
 
+const onRemoveCate = (id: number) => {
+        // call api
+        removeCate(id);
+        // reRender
+        setProducts(products.filter(item => item._id !== id)); 
+}
+
+
+
+
+const onHandleAddToCart = async (id: number) => {
+  const { data } = await read(id)
+  addToCart({ ...data, quantity: 1 }, function () {
+    toastr.success(`Thêm ${data.name} vào giỏ hàng thành công!`)
+    setCart(JSON.parse(localStorage.getItem('cart') as string))
+  })
+}
+const onHandleIncreaseItemInCart = (id: number) => {
+  increaseItemInCart(id, () => {
+    setCart(JSON.parse(localStorage.getItem('cart') as string))
+  })
+}
+const onHandleDecreaseItemInCart = (id: number) => {
+  decreaseItemInCart(id, () => {
+    setCart(JSON.parse(localStorage.getItem('cart') as string))
+  })
+}
+
+const onHandleRemoveCart = (id: number) => {
+  removeItemInCart(id, () => {
+    setCart(JSON.parse(localStorage.getItem('cart') as string))
+  })
+}
+
+
+const onhandleSearch = async (keyword: string) => {
+  const { data } = await SearchProductByName(keyword)
+  setsearchProduct(data)
+
+}
 
 
 
@@ -117,12 +163,16 @@ function App() {
           <Routes>
 
 
-            <Route path="/" element={<WebsiteLayout />}>
-              <Route index element={<Home products={products} />} />
+            <Route path="/" element={<WebsiteLayout onSearch={onhandleSearch} />}>
+
+              <Route index element={<Home products={products} onAddToCart={onHandleAddToCart} />} />
+              <Route path="cart" element={<CartPage onRemoveCart={onHandleRemoveCart} onDecreaseItemInCart={onHandleDecreaseItemInCart} onIncreaseItemInCart={onHandleIncreaseItemInCart} />} />
+              
               <Route path="Contact"  element={<Contact />} />
-              <Route path="Cart" element={<Cart />} />
-              <Route path="search/:value" element={<Search />} />
-              <Route path="Details/:id" element={<Details products={products} />} />
+
+              
+              <Route path="/search" element={<Search products={searchProduct} />} />
+              {/* <Route path="Details/:id" element={<Details products={products}  />} /> */}
               
 
               <Route path="/signup" element={<Signup onSignup={onSignup}/>}/>
@@ -139,6 +189,7 @@ function App() {
             
 
 
+
             <Route path="admin" element={<AdminLayout />}>
                 <Route index element={<Navigate to="dashboard"/>} />
                 <Route path="dashboard" element={<Dashboard />} />
@@ -151,8 +202,9 @@ function App() {
                 </Route>
 
                 <Route path="categorys">
-                    <Route index element= {<CategoryList  categorys={categorys} />} />
+                    <Route index element= {<CategoryList  categorys={categorys} onRemoveCate={onRemoveCate}/>} />
                     <Route path="add" element={<CategoryAdd onAddCategory={onHandleAddCategory}/> } />
+                    <Route path=":id/edit" element={<CategoryEdit /> } />
                 </Route>
 
             </Route>

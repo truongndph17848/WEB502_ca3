@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 type Props = {
   products: ProductTye[];
+  onAddToCart: (cart: any) => void;
 }
 
 
@@ -91,14 +92,14 @@ const Home = (props: Props) => {
                 <div className="offer">- %20</div>
                 <div className="thumbnail">
                   <a href="Details"><img src="https://oldsailor.com.vn/vnt_upload/product/02_2021/z2305655225005_5519e1d7eb0a946a5b1fa8327bf006b3_1.jpg"  /></a>
-                  <button > <NavLink to={`/Details/${product.id}`}> aaaaaaaaa</NavLink> </button>
+                  <button > <NavLink to={`/Details/${product._id}`}> aaaaaaaaa</NavLink> </button>
                 </div>
                 <div className="productname"> {product.name}</div>
                 <h5 className="productname"> {product.name}</h5>
                 <h4 className="price"> ${product.price}</h4>
                 <div className="button_group">
                   
-                  <button className="button add-cart" type="button">Add To Cart</button>
+                <NavLink to=""><button onClick={() => props.onAddToCart(product._id)}>Add to cart</button></NavLink>
 
                   <button className="button compare" type="button"><i className="fa fa-exchange" /></button><button className="button wishlist" type="button"><i className="fa fa-heart-o" /></button></div>
               </div>

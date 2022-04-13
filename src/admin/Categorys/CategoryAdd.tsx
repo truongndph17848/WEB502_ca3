@@ -8,7 +8,7 @@ type CategoryProps = {
 
 type typeInputs = {
     id?: number,
-    category: string
+    name: string
 }
 
 const CategoryAdd = (props: CategoryProps) => {
@@ -22,7 +22,7 @@ const CategoryAdd = (props: CategoryProps) => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-        <input type="text" placeholder='Tên Danh Mục' {...register('category')} />
+        <input type="text" placeholder='Tên Danh Mục' {...register('name')} />
         <button> Add </button>
     </form>
   )

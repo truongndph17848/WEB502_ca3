@@ -1,10 +1,20 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { currencyPrice } from '../utils/formatMoney'
 
-type Props = {}
 
-const Cart = (props: Props) => {
-  return (
-    
+type Props = {
+    onIncreaseItemInCart: (id: number) => void
+    onDecreaseItemInCart: (id: number) => void
+    onRemoveCart: (id: number) => void
+}
+
+const CartPage = (props: Props) => {
+    let cart: any = [];
+    cart = JSON.parse(localStorage.getItem('cart') as string);
+    let total = 0
+    return (
+ 
 <div>
   <div className="container_fullwidth">
     <div className="container shopping-cart">
@@ -19,19 +29,19 @@ const Cart = (props: Props) => {
             <thead>
               <tr>
                 <th>
-                  Image
+                  Số Thứ Tự
                 </th>
                 <th>
-                  Dtails
+                  Images
                 </th>
                 <th>
-                  Price
+                  Name
                 </th>
                 <th>
-                  Quantity
+                  Giá
                 </th>
                 <th>
-                  Price
+                  Số Lượng
                 </th>
                 <th>
                   Delete
@@ -39,7 +49,17 @@ const Cart = (props: Props) => {
               </tr>
             </thead>
             <tbody>
-              <tr>
+
+
+
+
+            {/* list danh mục */}
+
+
+
+
+
+              {/* <tr>
                 <td>
                   <img src="images/products/small/products-06.png"  />
                 </td>
@@ -109,159 +129,46 @@ const Cart = (props: Props) => {
                     <img src="images/remove.png"  />
                   </a>
                 </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="images/products/small/products-02.png"  />
-                </td>
-                <td>
-                  <div className="shop-details">
-                    <div className="productname">
-                      Lincoln Corner Unit Products
-                    </div>
-                    <p>
-                      <img  src="images/star.png" />
-                      <a className="review_num" href="#">
-                        02 Review(s)
-                      </a>
-                    </p>
-                    <div className="color-choser">
-                      <span className="text">
-                        Product Color : 
-                      </span>
-                      <ul>
-                        <li>
-                          <a className="gray-bg" href="#">
-                            pink
-                          </a>
-                        </li>
-                        <li>
-                          <a className="black-bg " href="#">
-                            black
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <p>
-                      Product Code : 
-                      <strong className="pcode">
-                        Dress 132
-                      </strong>
-                    </p>
-                  </div>
-                </td>
-                <td>
-                  <h5>
-                    $200.00
-                  </h5>
-                </td>
-                <td>
-                  <select >
-                    <option selected value={1}>
-                      1
-                    </option>
-                    <option value={2}>
-                      2
-                    </option>
-                    <option value={3}>
-                      3
-                    </option>
-                  </select>
-                </td>
-                <td>
-                  <h5>
-                    <strong className="red">
-                      $200.00
-                    </strong>
-                  </h5>
-                </td>
-                <td>
-                  <a href="#">
-                    <img src="images/remove.png"  />
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="images/products/small/products-05.png"  />
-                </td>
-                <td>
-                  <div className="shop-details">
-                    <div className="productname">
-                      Lincoln Corner Unit Products
-                    </div>
-                    <p>
-                      <img  src="images/star.png" />
-                      <a className="review_num" href="#">
-                        02 Review(s)
-                      </a>
-                    </p>
-                    <div className="color-choser">
-                      <span className="text">
-                        Product Color : 
-                      </span>
-                      <ul>
-                        <li>
-                          <a className="red-bg" href="#">
-                            light red
-                          </a>
-                        </li>
-                        <li>
-                          <a className=" yellow-bg" href="#">
-                            yellow"
-                          </a>
-                        </li>
-                        <li>
-                          <a className="black-bg " href="#">
-                            black
-                          </a>
-                        </li>
-                        <li>
-                          <a className="pink-bg" href="#">
-                            pink
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <p>
-                      Product Code : 
-                      <strong className="pcode">
-                        Dress 050
-                      </strong>
-                    </p>
-                  </div>
-                </td>
-                <td>
-                  <h5>
-                    $200.00
-                  </h5>
-                </td>
-                <td>
-                  <select >
-                    <option selected value={1}>
-                      1
-                    </option>
-                    <option value={2}>
-                      2
-                    </option>
-                    <option value={3}>
-                      3
-                    </option>
-                  </select>
-                </td>
-                <td>
-                  <h5>
-                    <strong className="red">
-                      $200.00
-                    </strong>
-                  </h5>
-                </td>
-                <td>
-                  <a href="#">
-                    <img src="images/remove.png"  />
-                  </a>
-                </td>
-              </tr>
+              </tr> */}
+
+
+                                             {cart && cart.map((item: any, index: number) => {
+                                    return <tr key={index}>
+
+                                       <td className="px-6 py-3 max-w-[30px] w-[30px] text-center font-semibold">
+                                             {index + 1}
+                                         </td>
+                                         <td className="px-6 py-3 text-left">
+                                             <img src={item.img} className="w-20" />
+                                         </td>
+                                        <td className="px-6 py-3 text-left">
+                                             <NavLink to={`/`} className="no-underline">
+                                                {item.name}
+                                            </NavLink>
+
+                                        </td>
+                                         <td className='text-red-600 font-bold text-center'>{currencyPrice(`${item.price * item.quantity}`)} <u>đ</u></td>
+                                         <td className="px-6 py-3 text-left">
+                                             <button onClick={() => props.onIncreaseItemInCart(item._id)} className="btn increase border border-black p-2">+</button>
+                                             <span className='px-2'>{item.quantity}</span>
+                                             <button onClick={() => props.onDecreaseItemInCart(item._id)} className="btn decrease border border-black p-2">-</button>
+                                         </td>
+                                        <td className="px-6 py-3 text-right">
+                                             <button onClick={() => props.onRemoveCart(item._id)} className="btn remove border font-normal text-[12px] uppercase hover:bg-gray-600 hover:text-white duration-300 border-gray-400 rounded px-5 py-1">Remove</button>
+                                         </td>
+                                         <td hidden>{total += item.price * item.quantity}</td>
+
+
+                                     </tr>
+                                 })}
+
+
+
+
+
+
+
+              
             </tbody>
 
           </table>
@@ -774,6 +681,11 @@ const Cart = (props: Props) => {
                 </form>
               </div>
             </div>
+
+
+
+        {/* Tổng tiền */}
+
             <div className="col-md-4 col-sm-6">
               <div className="shippingbox">
                 <div className="subtotal">
@@ -781,7 +693,7 @@ const Cart = (props: Props) => {
                     Sub Total
                   </h5>
                   <span>
-                    $1.000.00
+                  ${total}
                   </span>
                 </div>
                 <div className="grandtotal">
@@ -789,7 +701,7 @@ const Cart = (props: Props) => {
                     GRAND TOTAL 
                   </h5>
                   <span>
-                    $1.000.00
+                  ${total}
                   </span>
                 </div>
                 <button>
@@ -797,6 +709,16 @@ const Cart = (props: Props) => {
                 </button>
               </div>
             </div>
+
+
+
+
+
+
+
+
+
+
           </div>
         </div>
       </div>
@@ -904,7 +826,8 @@ const Cart = (props: Props) => {
   </div>
 </div>
 
-  )
+
+    )
 }
 
-export default Cart
+export default CartPage

@@ -4,6 +4,7 @@ import { CategoryType } from '../../types/category';
 
 type Props = {
   categorys: CategoryType[];
+  onRemoveCate: (id: number) => void
 }
 
 const CategoryList = (props: Props) => {
@@ -23,12 +24,12 @@ const CategoryList = (props: Props) => {
     {props.categorys?.map((category, index) => {
            return <tr>
              <td key={index}> {index + 1} </td>
-             <td> { category.category}</td>
+             <td> { category.name}</td>
              <td>
-                  <button> Remove</button>
+                  <button onClick={()=>{props.onRemoveCate(category._id!)}}> Remove</button>
                 </td>
                 <td>
-                  <button > EDIT </button>
+                  <button > <NavLink to={`/admin/categorys/${category._id}/edit`}>Edit</NavLink> </button>
                   </td>
            </tr>
          })}

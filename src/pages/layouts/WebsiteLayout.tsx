@@ -1,13 +1,30 @@
 import React,  { useRef } from 'react'
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom'
 
 import { Outlet } from 'react-router-dom'
 import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
 
-type Props = {}
+type Props = {
+  onSearch: (keyword: string) => void
+}
+
+type FormInputs = {
+  q: string
+}
 
 const WebsiteLayout = (props: Props) => {
 
+  const { register, handleSubmit, formState: { errors } } = useForm<FormInputs>();
+    const navigate = useNavigate()
+    const onSubmit: SubmitHandler<FormInputs> = data => {
+
+         props.onSearch(data.q)
+         console.log(data.q);
+         
+        navigate(`/search?q=${data.q}`)
+
+    }
 
   return (
     <div className="wrapper">
@@ -68,9 +85,9 @@ const WebsiteLayout = (props: Props) => {
 
 
 
-                <form>
-                  <input className="search-submit" type="submit"  />
-                  <input className="search-input" placeholder="Enter your search term..." type="text"  name="search" />
+                <form action='/search' onSubmit={handleSubmit(onSubmit)}>
+
+                  <input  placeholder="Enter your search term..." type="text" {...register('q')} name="q" />
                   </form>
 
 

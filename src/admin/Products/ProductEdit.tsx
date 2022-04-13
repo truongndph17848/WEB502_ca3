@@ -16,10 +16,13 @@ const ProductEdit = (props: ProductEditProps) => {
     const navigate = useNavigate();
     const { id } = useParams();
 
+console.log(id);
+
 
     useEffect(() => {
         const getProduct = async () => {
             const { data } = await read(id);
+            console.log(id);
             reset(data);
         }
         getProduct();
@@ -34,9 +37,9 @@ const ProductEdit = (props: ProductEditProps) => {
     } 
   return (
       <form action="" onSubmit={handleSubmit(onSubmit)}>
-        <input type="text"  {...register('name', {required: true})}/>
+        <input type="text"  {...register("name", {required: true})}/>
         <input type="number"  {...register("price")} />
-        <button>Update</button>
+        <button> Update</button>
       </form>
   )
 }
